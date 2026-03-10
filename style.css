@@ -2,12 +2,6 @@
 
 @import url('https://fonts.google.com/specimen/DM+Sans?query=dm+sans');
 
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   /* Marca */
   --color-brand: #1db954; /* Verde Spotify */
@@ -53,10 +47,22 @@ body {
   font-family: var(--font-base);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
 }
 
 .logo {
@@ -67,6 +73,12 @@ body {
   list-style: none;
   display: flex;
   gap: var(--spacing-lg);
+}
+
+.links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: var(--font-weight-medium);
 }
 
 .hero {
@@ -81,3 +93,24 @@ body {
   color: var(--color-text-primary);
 }
 
+.hero h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium );
+  margin-bottom: var(--spacing-md);
+}
+
+.features {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  text-align: center;
+}
+
+.features h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 3px solid var(--color-brand);
+  display: inline-block;
+  padding-bottom: var(--spacing-xs);
+  margin-left: auto;
+  margin-right: auto;
+}
