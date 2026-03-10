@@ -1,0 +1,14 @@
+
+@media (min-width: 1440px) {
+  .hero {
+    background: url('assets/landing.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text-primary);
+  }
+}
