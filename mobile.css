@@ -16,7 +16,12 @@
   --color-text-secondary: #b3b3b3;
   --color-text-muted: #6a6a6a;
 
-  /* Bordes / separadores */
+  /* Bordes */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 500px; /* Para botones en píldora */
+
+  /* separadores */
   --color-border: #333333;
 
   /* Tamaños */
@@ -169,8 +174,43 @@ body {
     text-align: center;
   }
 
-  /* Clase que activaremos con JS */
   .links.active {
     display: flex;
   }
+}
+
+footer {
+  background-color: var(--color-brand);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-xs);
+  text-align: center;
+  margin: var(--spacing-md) var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+}
+
+footer h2 {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: solid 2px var(--color-text-primary);
+  display: inline-block;
+}
+
+footer h3 {
+  margin: var(--spacing-md) 0;
+}
+
+footer p {
+  text-align: left;
+}
+
+footer .footer-icon {
+  width: 50px;
+  margin-top: var(--spacing-md);
+}
+
+footer .app-spotify {
+  width: 100%;
+  margin-top: var(--spacing-md);
 }
