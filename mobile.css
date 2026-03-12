@@ -1,14 +1,176 @@
-@media (min-width: 375px) and (max-width: 768px) {
-  .hero {
-    background: url('assets/landing.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--color-text-primary);
-  }
+@import url('https://fonts.google.com/specimen/Montserrat?query=montserrat');
+
+@import url('https://fonts.google.com/specimen/DM+Sans?query=dm+sans');
+
+:root {
+  /* Marca */
+  --color-brand: #1db954; /* Verde Spotify */
+  --color-brand-hover: #1ed760; /* Verde hover */
+
+  /* Fondos */
+  --color-bg-dark: #191414; /* Negro Spotify */
+  --color-bg-secondary: #282828; /* Gris oscuro tarjetas */
+
+  /* Textos */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b3b3b3;
+  --color-text-muted: #6a6a6a;
+
+  /* Bordes / separadores */
+  --color-border: #333333;
+
+  /* Tamaños */
+  --spacing-xs: 0.25rem; /*  4px */
+  --spacing-sm: 0.5rem; /*  8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 2rem; /* 32px */
+  --spacing-xl: 4rem; /* 64px */
+  --spacing-2xl: 6rem; /* 96px */
+
+  /* Font */
+  --font-base: 'Montserrat', 'DM Sans', Helvetica, Arial, sans-serif;
   
+  --font-size-xs: 0.75rem; /*  12px */
+  --font-size-sm: 0.875rem; /*  14px */
+  --font-size-base: 1rem; /*  16px */
+  --font-size-md: 1.125rem; /*  18px */
+  --font-size-lg: 1.5rem; /*  24px */
+  --font-size-xl: 2rem; /*  32px */
+  --font-size-2xl: 3rem; /*  48px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-xs);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  position: relative;
+}
+
+.logo {
+  height: var(--spacing-lg);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+}
+
+.item-link {
+  margin: 0 var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.item-link a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color 0.3s ease;
+}
+
+.item-link:hover {
+  background-color: var(--color-brand);
+}
+
+.item-link:hover a {
+  color: var(--color-text-primary);
+}
+
+.hero {
+  background: url('assets/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero h1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.features {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  text-align: center;
+}
+
+.features h2 {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 3px solid var(--color-brand);
+  display: inline-block;
+  padding-bottom: var(--spacing-xs);
+}
+.features article {
+  margin-bottom: var(--spacing-lg);
+}
+
+.features article h3 {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-brand)
+}
+
+.features article img {
+  width: 80px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+  }
+
+  /* Clase que activaremos con JS */
+  .links.active {
+    display: flex;
+  }
 }
