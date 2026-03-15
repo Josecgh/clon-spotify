@@ -44,9 +44,9 @@
   --font-weight-bold: 700;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   body {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-base);
   }
 
   .navbar {
@@ -64,7 +64,7 @@
   .hero {
     background-size: cover;
     background-position: center;
-    height: 800px;
+    height: 450px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -87,11 +87,16 @@
     max-width: 100%;
   }
 
-  .footer {
+  footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: var(--spacing-lg) var(--spacing-xl);
+    padding: 40px;
+  }
+
+  footer section {
+    flex: 1;
+    margin-right: 30px;
   }
 
   .footer-icon {
